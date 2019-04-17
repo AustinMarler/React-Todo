@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { removeToDoItem, handleCheck, filterCheck } from '../actions/actions';
+import { connect } from 'react-redux'
 
 class ToDoItem extends Component {
   removeToDoItem = () => {
@@ -31,4 +32,10 @@ class ToDoItem extends Component {
   }
 }
 
-export default ToDoItem
+function mapStateToProps(appState) {
+  return {
+    currentFilter: appState.currentFilter
+  }
+}
+
+export default connect(mapStateToProps)(ToDoItem)

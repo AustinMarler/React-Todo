@@ -105,10 +105,10 @@ label {
 }
 
 .checkArea div p {
-  color: lawngreen;
+  color: white;
   font-weight: bold;
   margin: 0;
-  font-size: 20px;
+  font-size: 0;
 }
 
 .checkCircle {
@@ -122,12 +122,9 @@ label {
   align-items: center;
 }
 
-.check {
-  display: none;
-}
-
-.completed {
-  display: block;
+.checkArea div p.completed {
+  color: lawngreen;
+  font-size: 24px;
 }
 
 .toDoContentContainer {
