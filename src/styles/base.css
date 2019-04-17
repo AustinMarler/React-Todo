@@ -1,9 +1,10 @@
 html {
-  box-sizing:border-box;
+  box-sizing: border-box;
+  background-color: lightgray;
 }
 
 *, *::before, *::after {
-  box-sizing:inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -19,4 +20,177 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+label {
+  color: gray;
+}
+
+#app {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#mainContainer {
+  width: 502px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#headerContainer h3 {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+#bodyContainer {
+  background-color: white;
+  border: 1px solid black;
+}
+
+#bodyContainer, #toDoContainer, #toDoInputContainer, .toDoItemContainer, #toDoFooterContainer {
+  width: 100%;
+}
+
+#toDoInputContainer {
+  display: flex;
+  height: 50px;
+  background-color: rgb(250, 250, 250);
+}
+
+#labelContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+#labelContainer label {
+  color: lightgray;
+  font-size: 30px;
+}
+
+#toDoInputContainer input {
+  width: 90%;
+  height: 100%;
+  background: transparent;
+}
+
+#toDoInputContainer, .toDoItemContainer {
+  border-bottom: 1px solid lightgray;
+}
+
+.toDoItemContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.checkArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.checkArea div p {
+  color: lawngreen;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+
+.checkCircle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check {
+  display: none;
+}
+
+.completed {
+  display: block;
+}
+
+.toDoContentContainer {
+  width: 80%;
+}
+
+.toDoContentCompleted {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.deleteToDoX {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+
+.deleteToDoX p {
+  color: indianred;
+  font-size: 10px;
+  margin: 0;
+  align-self: center;
+  transition: font-size 0.1s;
+}
+
+.deleteToDoX p:hover {
+  color: red;
+  font-size: 16px;
+}
+
+#toDoFooterContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#toDoFooterContainer p {
+  font-size: 10px;
+}
+
+#itemsLeft {
+  padding-left: 10px;
+}
+
+#itemsLeft, #clearCompletedItems {
+  width: 25%;
+}
+
+#itemsFilter {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.selectedFilter {
+  color: royalblue;
+}
+
+#clearCompletedItems {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+#clearCompletedItems p:hover {
+  color: red;
 }
